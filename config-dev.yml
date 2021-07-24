@@ -1,1 +1,26 @@
-dev
+spring:
+  application:
+    name: cloud-provider-hystrix-payment
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gz-cdb-34nq53xl.sql.tencentcdb.com:58563/dbcloud?useUnicode=true&characterEncoding-utf-8&useSSL=false
+    username: root
+    password: lt945835
+    # cloud:
+    #  zookeeper:
+    #  connect-string: 106.52.48.218:2181
+eureka:
+  client:
+    #register-with-eureka: true
+    #fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.lutong.pojo
+
+
+
+envir: dev
